@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="cookies.js"></script>
+        <title>N8theGrape</title>
+    </head>
+    <body>
+
+        <header>
+            <div id="logo">N8theGrape</div>
+                <nav>
+                    <a href="#" id="homeButton">Home</a>
+                    <a href="#" id="aboutButton">About</a>
+                    <a href="apps/" id="servicesButton">Apps</a>
+                    <a href="#" id="contactButton">Contact</a>
+                    <a href="games/" id="gamesButton">Games</a>
+                </nav>
+            <div id="login" onclick="fun1();">Login</div>
+            <div id="logout" onclick="fun2();">Logout</div>
+        </header>
+        <h1>Welcome to N8theGrape</h1>
+        <main>
+            <p>Main Element:</p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Congue mauris rhoncus aenean vel. Eget sit amet tellus cras 
+                adipiscing enim eu. Eget sit amet tellus cras adipiscing enim 
+                eu. Nisl nunc mi ipsum faucibus. Eleifend donec pretium vulputate 
+                sapien nec sagittis aliquam malesuada. Ultrices sagittis orci a 
+                scelerisque. Faucibus a pellentesque sit amet porttitor eget. 
+                Laoreet non curabitur gravida arcu ac tortor dignissim convallis. 
+                Tellus orci ac auctor augue mauris. Netus et malesuada fames ac. 
+                Pellentesque eu tincidunt tortor aliquam nulla facilisi cras.
+                <br><br>
+                Nulla pharetra diam sit amet nisl suscipit adipiscing. Egestas sed 
+                sed risus pretium quam vulputate dignissim. At quis risus sed vulputate 
+                odio ut enim blandit volutpat. Arcu non sodales neque sodales ut. Risus 
+                sed vulputate odio ut enim blandit volutpat maecenas volutpat. Semper 
+                eget duis at tellus at urna condimentum mattis. Aliquam eleifend mi in 
+                nulla posuere sollicitudin aliquam ultrices. Quis risus sed vulputate 
+                odio ut enim blandit. Amet massa vitae tortor condimentum lacinia. Velit 
+                dignissim sodales ut eu sem integer. Sed elementum tempus egestas sed 
+                sed risus pretium quam. Nisi vitae suscipit tellus mauris. Enim facilisis 
+                gravida neque convallis a. Turpis in eu mi bibendum neque. Tempus iaculis 
+                urna id volutpat lacus laoreet non. Scelerisque eu ultrices vitae auctor.
+                <br><br>
+                Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. 
+                Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. 
+                Enim facilisis gravida neque convallis. Eget nunc scelerisque viverra 
+                mauris. Mollis nunc sed id semper risus in hendrerit gravida rutrum. 
+                Fusce id velit ut tortor pretium viverra suspendisse. Venenatis lectus 
+                magna fringilla urna porttitor rhoncus dolor purus. Suspendisse ultrices 
+                gravida dictum fusce ut placerat orci. Molestie nunc non blandit massa enim. 
+                Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Nisl 
+                rhoncus mattis rhoncus urna neque viverra justo. Viverra suspendisse potenti 
+                nullam ac tortor vitae purus faucibus ornare. Ornare arcu odio ut sem nulla 
+                pharetra diam sit. Malesuada fames ac turpis egestas sed tempus. Viverra 
+                tellus in hac habitasse platea dictumst. Sapien pellentesque habitant morbi 
+                tristique senectus et netus et malesuada.
+            </p>
+        </main>
+        <footer>
+            <h3>
+                Footer
+                <br>
+                &copy N8theGrape
+            </h3>
+        </footer>
+        <script>
+            var isAuthenticated = getCookie('isAuthenticated') == 'true';
+            var ID = getCookie('accountID');
+            function readCookies () {
+                var isAuthenticated = getCookie('isAuthenticated') == 'true';
+                var ID = getCookie('accountID');
+            }
+            function fun1() {
+                readCookies();
+                openLogin();
+            }
+            function fun2() {
+                readCookies();
+                handleLogout();
+            }
+            function openLogin() {
+                loginWindow = window.open("login", "Login", "width=500,height=400,resizable=no");
+                loginWindow.addEventListener('unload', function () {
+                    if(getCookie('isAuthenticated') == 'true') {
+                        alert('Logged in as ' + getCookie('accountName'));
+                        document.getElementById('login').style.display = 'none';
+                        document.getElementById('logout').style.display = 'inline-block';
+                        document.getElementById('gamesButton').style.display = 'inline-block';
+                        handleLogin();
+                    }
+                });
+            }
+            function handleLogout() {
+                document.getElementById('login').textContent = 'Login';
+                deleteCookie('isAuthenticated');
+                deleteCookie('accountID');
+                deleteCookie('accountName');
+                readCookies();
+                document.getElementById('logout').style.display = 'none';
+                document.getElementById('gamesButton').style.display = 'none';
+                document.getElementById('login').style.display = 'inline-block';
+            }
+            if(getCookie('isAuthenticated') == 'true') {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('gamesButton').style.display = 'inline-block';
+                document.getElementById('logout').style.display = 'inline-block';
+            } else {
+                document.getElementById('logout').style.display = 'none';
+                document.getElementById('gamesButton').style.display = 'none';
+                document.getElementById('login').style.display = 'inline-block';
+            }
+        </script>
+    </body>
+</html>
