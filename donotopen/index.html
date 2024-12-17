@@ -5,11 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>N8theGrape</title>                           <!-- WEBSITE TITLE -->
         <!-- CSS -->
-        <link rel="stylesheet" href="CSS/style.css">
-        <link rel="stylesheet" href="CSS/width.css">
-        <link rel="stylesheet" href="CSS/height.css">
+        <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="../CSS/specialClasses.css">
         <!-- JS -->
-    <script src="JS/main.js"></script>
+        <script type="text/javascript" src="../JS/main.js"></script>
+        <script type="text/javascript" src="../JS/doNotOpen.js"></script>
+        <script>
+            
+        </script>
     </head>
     <body>
         <!-- Navigation -->
@@ -30,41 +33,38 @@
         </header>
 
         <!-- Main Website Body-->
-        <main>
+        <main textAlign-center>
             <!-- MAKE WEBSITE BODY -->
-            <p>
-                Lorem ipsum odor amet, consectetuer adipiscing elit. Blandit
-                sodales euismod ligula ligula egestas ut. Ridiculus tristique 
-                ante sit curabitur laoreet interdum. Purus mauris ultrices nisi 
-                arcu interdum facilisis taciti magna vulputate. Urna amet commodo 
-                ipsum ad ridiculus facilisi. Dignissim nascetur velit sapien at; 
-                eu ante.
-            </p>
-            <hr>
-            <p>
-                Natoque lectus ipsum non per nullam proin sem class. Mauris dis 
-                tempor odio posuere diam. Blandit sem viverra interdum molestie 
-                gravida. Accumsan feugiat bibendum non ac aliquam dictum 
-                vestibulum potenti. Viverra penatibus cras accumsan aliquam dis a 
-                mus habitasse egestas. Curabitur pellentesque euismod a laoreet 
-                massa varius arcu ultrices. Molestie aliquam massa fames magna 
-                ligula amet tincidunt sollicitudin. Class elit consectetur 
-                penatibus ut convallis. Cubilia non mollis diam, duis magnis class.
-            </p>
-            <hr>
-            <p>
-                Mollis quisque nascetur; fusce neque sagittis est tristique. Sodales vestibulum ipsum dis, luctus dui amet metus ullamcorper. Velit nulla fusce torquent volutpat etiam adipiscing. Sociosqu nunc vestibulum aliquam vitae magnis eleifend. Vivamus sodales augue nam, tristique quisque nam eget. Nibh erat turpis maecenas cras suspendisse dictumst consectetur convallis. Pulvinar non faucibus per arcu elit leo consectetur congue leo. Porta est laoreet condimentum et turpis, duis rhoncus. Himenaeos dapibus felis ex, mollis semper augue.
-            </p>
-            <hr>
-            <p>
-                Faucibus gravida adipiscing leo sodales sit sit ipsum adipiscing. Elementum ac vulputate fermentum iaculis suspendisse. Odio natoque curae senectus himenaeos posuere quisque? Lobortis suspendisse porttitor feugiat ad duis euismod pharetra aptent? Proin placerat viverra inceptos luctus gravida at himenaeos. Risus dignissim volutpat molestie iaculis non cras. Hac sociosqu vel sem ullamcorper eu conubia fames ornare. Aptent dui tortor sodales a lectus. Tristique sit maecenas leo est conubia conubia duis.
-            </p>
-            <hr>
-            <p>
-                Curabitur amet diam morbi velit ultricies blandit egestas porta. Massa nibh senectus dictum nam egestas lectus curabitur dictum. Ornare vulputate ultrices taciti sed convallis? Tristique nam nulla congue tellus integer gravida gravida. Nisi mus nullam senectus dui diam. Lectus fusce ligula maximus mollis lacus orci imperdiet porttitor netus.
-            </p>
+            <input
+                fontSize-100
+                textAlign-center
+                type="text"
+                placeholder="Input Key to Continue"
+                id="key"
+                onkeydown="
+                    if (event.key == 'Enter') {
+                        getSet(document.getElementById('key'));
+                    }
+                "
+            >
+            <input
+                fontSize-100
+                type="button"
+                value="Continue"
+                onclick="
+                    document.getElementById('Set1').innerText = decrypt(document.getElementById('Set1').innerText, document.getElementById('test').value);
+                "
+            >
+            <br><br>
+            <div id="Set1">
+            <ol w-50>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>rgwierubgiwerugbiwerugwierugMilk</li>
+            </ol>
+            </div>
         </main>
-
+        
         <!-- Website Footer -->
         <footer>
             <!-- PUT FOOTER ELEMENTS HERE -->

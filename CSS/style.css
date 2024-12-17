@@ -1,0 +1,122 @@
+/* Default Settings */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #eee;
+}
+
+/* Navigation Bar */
+    /* Default */
+.nav {
+    text-align: center;
+    background-color: #333;
+    border: 1vw solid black;
+    position:fixed;
+    width:100%;
+    top:-1vw;
+    left:-1vw;
+    min-height: 5vw;
+    z-index: 9;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    /* Default Elements */
+.nav * {
+    font-size: 1.5vw;
+    margin: auto;
+}
+    /* Default Button */
+.nav button {
+    position: relative;
+    padding: 0.75vw 3vw;
+    border: none;
+    border-radius: 1.5vw;
+    outline:none;
+    cursor: pointer;
+    background-color: #DDD;
+    width: 15vw;
+}
+    /* Hover Button */
+.nav button:hover {
+    background-color: #AAA;
+}
+.nav button:active {
+    background-color: #888;
+}
+
+/* Header */
+    /* Default */
+header {
+    text-align: center;
+    background-color: #1A1A1A;
+    padding: 15px;
+    height: 10vw;
+    margin-top: 5vw;
+}
+    /* Default Elements */
+header * {
+    color: #eee;
+}
+    /* Header 1 Elements */
+header h1 {
+    font-size: 4vw;
+    position:relative;
+    top: -1vw;
+}
+    /* Header 6 Elements */
+header h2 {
+    font-size: 1.5vw;
+    position:relative;
+    top:-3.5vw;
+}
+    /* Hover Elements */
+header *:hover {}
+
+/* Main Body */
+    /* Default */
+main {
+    /*max-width: 800px; */
+    width: 80%;
+    margin: 1vw auto;
+    margin-bottom: 6vw;
+    padding: 1% 5%;
+    background-color: #fff;
+    border-radius: 1vw;
+    box-shadow: 0 0 25px #111f;
+}
+    /* Default Elements */
+main * {
+    color: #222;
+    margin: auto;
+}
+
+/* Footer */
+    /* Default */
+footer {
+    text-align: center;
+    color: #eee;
+    background-color: #1A1A1A;
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100vw;
+    margin: 0;
+    padding: 1vw;
+    height: 2vw;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    /* Default Elements */
+footer * {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.25vw;
+    margin: auto;
+}
+    /* Hover Elements */
+footer *:hover {
+    color:#aaa;
+}
