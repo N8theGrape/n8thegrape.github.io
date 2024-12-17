@@ -10,9 +10,6 @@
         <!-- JS -->
         <script type="text/javascript" src="../JS/main.js"></script>
         <script type="text/javascript" src="../JS/doNotOpen.js"></script>
-        <script>
-            
-        </script>
     </head>
     <body>
         <!-- Navigation -->
@@ -43,7 +40,7 @@
                 id="key"
                 onkeydown="
                     if (event.key == 'Enter') {
-                        getSet(document.getElementById('key'));
+                        getSet(document.getElementById('key').value);
                     }
                 "
             >
@@ -52,16 +49,16 @@
                 type="button"
                 value="Continue"
                 onclick="
-                    document.getElementById('Set1').innerText = decrypt(document.getElementById('Set1').innerText, document.getElementById('test').value);
+                    getSet(document.getElementById('key').value);
                 "
             >
             <br><br>
-            <div id="Set1">
-            <ol w-50>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>rgwierubgiwerugbiwerugwierugMilk</li>
-            </ol>
+            <div id="Set1" hidden>
+                <ol w-50>
+                    <li>Cumming Soon</li>
+                    <li>Cumming Soon</li>
+                    <li>Cumming Soon</li>
+                </ol>
             </div>
         </main>
         
